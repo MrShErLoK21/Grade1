@@ -7,43 +7,36 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     string filename;
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
-    cout << "Введите путь к CAT: ";
+    cout << "Введите путь к файлу: ";
     cin >> filename;
-    ifstream fin;
-    fin.open(filename);
+    fstream fin(filename);
     if (!fin.is_open())
     {
         cout << "Файл не может быть открыт или создан\n";
     }
     else
     {
-        string s = "London is a capital of Great Britian";
-        fin >> s;
-        fin.close();
         string s1;
-        string str;
-        cout << "Введите подстроку которую надо заменить" << endl;
+        string s2;
+        cout << "Введите подстроку которую надо заменить";
         getline(cin, s1);
-        cout << "Введите подстроку которой надо заменить" << endl;
-        getline(cin, str);
-        size_t po = s.find(s1);
+        cout << "Введите подстроку которой надо заменить";
+        getline(cin, s2);
+        string myText;
+        string fullText = "";
+        while (getline (fin, myText)) {
+            // Output the text from the file
+            fullText += myText;
+        }
+        size_t po = fullText.find(s1);
         if (po != std::string::npos)
         {
-            s.erase(po, s1.length());
-            s.insert(po, str);
+            fullText.erase(po, s1.length());
+            fullText.insert(po, s2);
         }
-        ofstream fout;
-        fout.open("text.txt", ios_base::trunc);
-        fout << s << endl;
-        fout.close();
+        fin << fullText;
+
     }
+    fin.close();
     return 0;
 }
