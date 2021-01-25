@@ -18,10 +18,10 @@ int main()
     {
         string s1;
         string s2;
-        cout<<"Введите CAT слово"<<endl;
-        cin>>s1;
-        cout<<"Введите второе слово"<<endl;
-        cin>>s2;
+        cout << "Введите Dog слово" << endl;
+        cin >> s1;
+        cout << "Введите второе слово" << endl;
+        cin >> s2;
         string myText;
         while (getline(fin, myText))
         {
