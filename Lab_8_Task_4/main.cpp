@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "util.cpp"
 using namespace std;
 struct note
 {
@@ -13,23 +14,7 @@ struct note
 
 int main() 
 {
-  bool statement = false;
   string answer;
-  while (statement == false)
-  {
-    cout<<"Хотите ли вы дополнить данные в файле? (1/0)"<<endl;
-    cin >> answer;
-    if(answer == "1")
-    {
-        statement = true;
-        statement = true;
-    }   
-    else if (answer == "0")
-    {
-        statement = true;
-        statement = false;
-    }
-  }
-  cout << answer;
-  
+  answer = question();
+  cout<<answer<<endl;
 }
