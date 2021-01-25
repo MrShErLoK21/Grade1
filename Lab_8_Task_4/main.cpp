@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-struct note_1
+struct note
 {
   string first_name;
   string last_name;
@@ -11,12 +11,13 @@ struct note_1
   int year;
 };
 
-void printf(note_1 lex)
+void printf(note lex)
 {
   
 }
 
 int main() 
 {
-  cout<<"Hello world"<<endl;
+    
+    cout<<"Hello world"<<endl;
 }
