@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
 #include <fstream>
 using namespace std;
 int main()
@@ -10,22 +9,17 @@ int main()
     cout << "Введите путь к файлу: ";
     cin >> filename;
     fstream fin(filename);
+    string fullText = "";
     if (!fin.is_open())
     {
         cout << "Файл не может быть открыт или создан\n";
     }
     else
     {
-        string s1;
-        string s2;
-        cout << "Введите подстроку которую надо заменить";
-        getline(cin, s1);
-        cout << "Введите подстроку которой надо заменить";
-        getline(cin, s2);
+        string s1 = "Files";
+        string s2 = "Dogs";
         string myText;
-        string fullText = "";
         while (getline (fin, myText)) {
-            // Output the text from the file
             fullText += myText;
         }
         size_t po = fullText.find(s1);
@@ -34,9 +28,10 @@ int main()
             fullText.erase(po, s1.length());
             fullText.insert(po, s2);
         }
-        fin << fullText;
-
     }
     fin.close();
+    ofstream MyFile(filename);
+    MyFile << fullText;
+    MyFile.close();
     return 0;
 }
