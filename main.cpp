@@ -18,12 +18,13 @@ int main()
     {
         string s1;
         string s2;
-        cout<<"Введите первое слово"<<endl;
-        cin>>s1;
-        cout<<"Введите второе слово"<<endl;
-        cin>>s2;
+        cout << "Введите первое Dog" << endl;
+        cin >> s1;
+        cout << "Введите второе слово" << endl;
+        cin >> s2;
         string myText;
-        while (getline (fin, myText)) {
+        while (getline(fin, myText))
+        {
             fullText += myText;
         }
         size_t po = fullText.find(s1);
