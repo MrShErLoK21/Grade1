@@ -23,7 +23,8 @@ int main()
         cout<<"Введите второе слово"<<endl;
         cin>>s2;
         string myText;
-        while (getline (fin, myText)) {
+        while (getline(fin, myText))
+        {
             fullText += myText;
         }
         size_t po = fullText.find(s1);
