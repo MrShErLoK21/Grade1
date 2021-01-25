@@ -11,13 +11,14 @@ struct note
   int year;
 };
 
-void printf(note lex)
-{
-  
-}
-
 int main() 
 {
+  bool want_to_insert = false;
+  while (want_to_insert == false)
+  {
+    cout<<"Хотите ли вы дополнить данные в файле?"<<endl;
     
-    cout<<"Hello world"<<endl;
+    
+  }
+  
 }
