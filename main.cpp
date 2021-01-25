@@ -7,7 +7,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     string filename;
-    cout << "Введите путь к файлу: ";
+    cout << "Введите путь к DOG: ";
     cin >> filename;
     ifstream fin;
     fin.open(filename);
