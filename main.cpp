@@ -18,7 +18,7 @@ int main()
     {
         string s1;
         string s2;
-        cout<<"Введите первое слово"<<endl;
+        cout<<"Введите CAT слово"<<endl;
         cin>>s1;
         cout<<"Введите второе слово"<<endl;
         cin>>s2;
