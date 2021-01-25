@@ -1,2 +1,2 @@
 language = "c++"
-run = "make main && ./main"
+run = "make Lab_8_Task_4/main && Lab_8_Task_4/main"
