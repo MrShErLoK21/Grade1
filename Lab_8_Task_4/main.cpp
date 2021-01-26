@@ -12,6 +12,7 @@ struct note
   int year;
 };
 
+
 int main() 
 {
   string answer;
