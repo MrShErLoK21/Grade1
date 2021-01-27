@@ -8,12 +8,6 @@
 using namespace std;
 
 
-void setData(string fileName)
-{
-    ofstream file(fileName);
-    file<<"dog\n";
-    file.close();
-}
 vector<vector<string>> getData(string fileName)
 {
     ifstream file(fileName);
@@ -45,4 +39,14 @@ vector<vector<string>> getData(string fileName)
     // Close the File
     file.close();
     return dataList;
+}
+void addData(string fileName, vector<string> data)
+{
+    ofstream file(fileName, ios_base::app);
+    for (string piece_of_data : data)
+    {
+        file<<piece_of_data<<",";
+    }
+    file<<endl;
+    file.close();
 }
