@@ -10,43 +10,34 @@
  * A class to read data from a csv file.
  */
 using namespace std;
-struct Note
-{
-    std::string first_name;
-    std::string last_name;
-    long phone_number;
-    int day;
-    int month;
-    int year;
-};
 
 class CSVReader
 {
-    std::string fileName;
-    std::string delimeter;
+    string fileName;
+    string delimeter;
 
 public:
-    CSVReader(std::string filename, std::string delm = ",") : fileName(filename), delimeter(delm)
+    CSVReader(string filename, string delm = ",") : fileName(filename), delimeter(delm)
     {
     }
     // Function to fetch data from a CSV File
-    std::vector<std::vector<std::string>> getData();
+    vector<vector<string>> getData();
 };
 /*
 * Parses through csv file line by line and returns the data
 * in vector of vector of strings.
 */
-std::vector<std::vector<std::string>> CSVReader::getData()
+vector<vector<string>> CSVReader::getData()
 {
-    std::ifstream file(fileName);
-    std::vector<std::vector<std::string>> dataList;
-    std::string line = "";
+    ifstream file(fileName);
+    vector<vector<string>> dataList;
+    string line = "";
     // Iterate through each line and split the content using delimeter
     while (getline(file, line))
     {
-        std::vector<std::string> vec;
+        vector<string> vec;
 
-        const int n = line.length();
+        int n = line.length();
         // declaring character array
         char char_array[n + 1];
 
@@ -57,7 +48,7 @@ std::vector<std::vector<std::string>> CSVReader::getData()
         char *p = strtok(char_array, ",");
         while (p)
         {
-            std::string word = p;
+            string word = p;
             vec.push_back(word);
             p = strtok(NULL, ",");
         }
@@ -77,15 +68,21 @@ int main()
     // Creating an object of CSVWriter
     CSVReader reader("example.csv");
     // Get the data from CSV File
-    std::vector<std::vector<std::string>> dataList = reader.getData();
+    vector<vector<string>> dataList = reader.getData();
     // Print the content of row by row on screen
-    for (std::vector<std::string> vec : dataList)
+    string last_name;
+    cout<<"Enter your last name"<<endl;
+    cin>>last_name;
+    for (vector<string> row : dataList)
     {
-        for (std::string data : vec)
+        if(row[0] == last_name)
         {
-            std::cout << data << " , ";
+            for (string data : row)
+            {
+                cout << data << " ";
+            }
+            cout<<endl;
         }
-        std::cout << std::endl;
-    }
+    } 
     return 0;
 }
