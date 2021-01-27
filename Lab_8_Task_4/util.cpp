@@ -6,7 +6,7 @@ string question ()
   string answer;
   while (statement == false)
   {
-    cout<<"Хотите ли вы дополнить данные в файле? (1/0)"<<endl;
+    cout<<"Do you want to add new entries to the file(1/0)"<<endl;
     cin >> answer;
     if(answer == "1")
     {
