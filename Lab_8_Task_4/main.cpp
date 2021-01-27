@@ -6,7 +6,7 @@
 #include <string.h>
 #include <algorithm>
 // #include <boost/algorithm/string.hpp>
-/*
+/* 
  * A class to read data from a csv file.
  */
 struct Note
