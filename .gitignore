@@ -2,3 +2,4 @@
 *.exe
 .replit/
 main
+.vscode/
