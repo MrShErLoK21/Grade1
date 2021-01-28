@@ -49,9 +49,16 @@ void amount_of_data()
 {
 
 }
-void situation()
+void situation(vector<vector<string>> &filedata)
 {
-
+    for(vector<string>row:filedata)
+    {
+        for(string word:row)
+        {
+            cout<<word<<",";
+        }
+        cout<<endl;
+    }
 }
 void top_10()
 {

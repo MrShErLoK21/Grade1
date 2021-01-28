@@ -8,15 +8,15 @@
 using namespace std;
 
 
-vector<vector<string>> getData(string fileName)
+ vector<vector<string>> getData(string path)
 {
-    ifstream file(fileName);
-    vector<vector<string>> dataList;
+    ifstream file(path);
+    vector<vector<string>> proxy_file_data;
     string line = "";
     // Iterate through each line and split the content using delimeter
     while (getline(file, line))
     {
-        vector<string> vec;
+         vector<string> row;
 
         int n = line.length();
         // declaring character array
@@ -30,19 +30,22 @@ vector<vector<string>> getData(string fileName)
         while (p)
         {
             string word = p;
-            vec.push_back(word);
+            row.push_back(word);
             p = strtok(NULL, ",");
         }
-        // boost::algorithm::split(vec, line, boost::is_any_of(delimeter));
-        dataList.push_back(vec);
+        if (row.size() != 6)
+        {
+            throw std::invalid_argument( "Error! Incorect file data" );
+        }
+         proxy_file_data.push_back(row);
     }
     // Close the File
     file.close();
-    return dataList;
+    return proxy_file_data;
 }
-void addData(string fileName, vector<string> data)
+void addData(string path, vector<string> data)
 {
-    ofstream file(fileName, ios_base::app);
+    ofstream file(path, ios_base::app);
     for (string piece_of_data : data)
     {
         file<<piece_of_data<<",";
