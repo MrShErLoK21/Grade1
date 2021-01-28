@@ -37,10 +37,32 @@ string question()
     }
     return answer;
 }
-void add_to_data()
+void add_to_data(string path)
 {
+    string ip_adreas, login, website, date, time, ammount;
+    cout<<"Enter ip adreas"<<endl;
+    cin>>ip_adreas;
 
+    cout<<"Enter login"<<endl;
+    cin>>login;
+
+    cout<<"Enter website"<<endl;
+    cin>>website;
+
+    cout<<"Enter date"<<endl;
+    cin>>date;
+
+    cout<<"Enter time"<<endl;
+    cin>>time;
+
+    cout<<"Enter ammount"<<endl;
+    cin>>ammount;
+
+    ofstream file (path, ios_base::app);
+    file<<ip_adreas<<","<<login<<","<<website<<","<<date<<","<<time<<","<<ammount<<endl;
+    file.close();
 }
+
 void edit_data()
 {
 
@@ -49,16 +71,9 @@ void amount_of_data()
 {
 
 }
-void situation(vector<vector<string>> &filedata)
+void situation()
 {
-    for(vector<string>row:filedata)
-    {
-        for(string word:row)
-        {
-            cout<<word<<",";
-        }
-        cout<<endl;
-    }
+
 }
 void top_10()
 {

@@ -21,7 +21,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    string path;
+    string path = "";
     if (argc == 2)
     {
         path = argv[1];
@@ -32,12 +32,11 @@ int main(int argc, char* argv[])
     return -1;
   }
     vector<vector<string>> proxy_file_data = getData(path);
-
     string answer;
     answer = question();
     if (answer == "1")
     {
-        add_to_data();
+        add_to_data(path);
     }
     else if (answer == "2")
     {
@@ -49,7 +48,7 @@ int main(int argc, char* argv[])
     }
     else if(answer == "4")
     {
-        situation(proxy_file_data);
+        situation();
     }
     else if (answer == "5")
     {
