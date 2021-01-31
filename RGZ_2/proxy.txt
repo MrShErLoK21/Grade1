@@ -1,0 +1,17 @@
+46.174.58.22,Oleg,www.freshnews.ua,12.05.2001,12:30,20
+46.174.50.20,Nikolai,www.freshnews.ua,13.06.2001,12:30,35
+91.185.50.20,Igor,www.freshnews.ua,13.06.2001,12:35,40
+91.200.50.20,Ivan,www.freshnews.ua,13.06.1995,12:50,50
+40.250.50.20,Alex,www.freshnews.ua,13.06.2003,12:12,55
+32.300.50.20,Senya,www.freshnews.ua,13.06.1986,12:10,10
+192.168.1.1,Nex,www.games.ua,12.06.1990,12:36,35
+192.168.0.1,Kot,www.games.ua,12.06.1992,12:36,48
+192.168.5.1,Leon,www.games.ua,12.06.1995,12:36,62
+192.168.4.1,Nexa,www.games.ua,12.06.1989,12:36,74
+192.168.3.1,Sedoy,www.games.ua,12.06.2000,12:36,98
+130.28.20.10,Ryaboy,www.national.ua,13.04.2002,12:40,24
+130.28.20.80,Petya,www.national.ua,13.04.2002,12:35,78
+130.28.20.90,Uliya,www.national.ua,13.04.2002,12:50,55
+30.28.20.91,Sad,www.length.com,20.12.2005,13:43,50
+12.39.56.87,Tir,www.length.com,20.02.2001,14:50,70
+65.40.53.20,length,www.enter.com,20.11.1993,15:40,90

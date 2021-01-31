@@ -32,6 +32,7 @@ int main(int argc, char* argv[])
     return -1;
   }
     vector<vector<string>> proxy_file_data = getData(path);
+    std::cout<<proxy_file_data.size();
     string answer;
     answer = question();
     if (answer == "1")
@@ -40,7 +41,7 @@ int main(int argc, char* argv[])
     }
     else if (answer == "2")
     {
-        edit_data();
+        edit_data(proxy_file_data, path);
     }
     else if (answer == "3")
     {

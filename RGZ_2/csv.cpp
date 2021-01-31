@@ -12,10 +12,11 @@ using namespace std;
 {
     ifstream file(path);
     vector<vector<string>> proxy_file_data;
-    string line = "";
+    string line;
     // Iterate through each line and split the content using delimeter
-    while (getline(file, line))
+    if(file.is_open())
     {
+    getline(file, line);
          vector<string> row;
 
         int n = line.length();
@@ -38,6 +39,10 @@ using namespace std;
             throw std::invalid_argument( "Error! Incorect file data" );
         }
          proxy_file_data.push_back(row);
+    }
+    else
+    {
+        cout<<"bullshit"<<endl;
     }
     // Close the File
     file.close();
